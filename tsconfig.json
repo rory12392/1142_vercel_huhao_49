@@ -30,6 +30,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/grocery_db_49/_components/SingleItem_xx.jsx", "src/app/grocery_db_49/_components/Items_xx.jsx", "src/app/grocery_db_49/_components/Form_xx.jsx", "src/app/grocery_49/page.jsx", "src/app/grocery_49/_components/SingleItem_xx.jsx", "src/app/grocery_49/_components/Items_xx.jsx", "src/app/grocery_49/_components/Form_xx.jsx"  ],
   "exclude": ["node_modules"]
 }

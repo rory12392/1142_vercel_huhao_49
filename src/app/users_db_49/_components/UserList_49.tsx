@@ -1,5 +1,5 @@
 
-import { fetchUsers } from '@/actions/userActions_49';
+import { fetchUsers } from '@/actions/user.actions_49';
 import DeleteButton_49 from './DeleteButton_49';
 const UserList_49 = async () => {
   const users = await fetchUsers();
