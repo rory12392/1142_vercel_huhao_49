@@ -8,6 +8,7 @@ const Navbar_49 = () => {
       <Link href='/tours_49'>Tours_49</Link>
       <Link href='/actions_49'>Actions_49</Link>
       <Link href='/users_db_49'>Users_db_49</Link>
+      <Link href='/grocery_49'>Grocery_49</Link>
     </nav>
   );
 };
