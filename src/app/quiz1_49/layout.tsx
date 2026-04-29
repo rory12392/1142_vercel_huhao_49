@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+// import { Geist, Geist_Mono } from 'next/font/google';
+// import '../globals.css';
 
-import Navbar_49 from './_components/NavbarShopNode_49';
+import Navbar_xx from './_components/NavbarQuiz1_49';
 
 import localFont from 'next/font/local';
 
@@ -29,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistLocalFont.className} ${geistMonoLocalFont.className} antialiased`}
       >
-        <Navbar_49 />
+        <Navbar_xx />
         <main className='max-w-3xl mx-auto py-4'>{children}</main>
       </body>
     </html>

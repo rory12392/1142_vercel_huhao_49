@@ -32,3 +32,18 @@ export type Post = Prisma.PostModel
  * 
  */
 export type Grocery = Prisma.GroceryModel
+/**
+ * Model Category_49
+ * 
+ */
+export type Category_49 = Prisma.Category_49Model
+/**
+ * Model Shop_49
+ * 
+ */
+export type Shop_49 = Prisma.Shop_49Model
+/**
+ * Model Blog_49
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Blog_49 = Prisma.Blog_49Model

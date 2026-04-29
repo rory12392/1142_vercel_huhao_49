@@ -386,7 +386,10 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 export const ModelName = {
   User: 'User',
   Post: 'Post',
-  Grocery: 'Grocery'
+  Grocery: 'Grocery',
+  Category_49: 'Category_49',
+  Shop_49: 'Shop_49',
+  Blog_49: 'Blog_49'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -402,7 +405,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "post" | "grocery"
+    modelProps: "user" | "post" | "grocery" | "category_49" | "shop_49" | "blog_49"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -628,6 +631,228 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    Category_49: {
+      payload: Prisma.$Category_49Payload<ExtArgs>
+      fields: Prisma.Category_49FieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.Category_49FindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.Category_49FindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>
+        }
+        findFirst: {
+          args: Prisma.Category_49FindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.Category_49FindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>
+        }
+        findMany: {
+          args: Prisma.Category_49FindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>[]
+        }
+        create: {
+          args: Prisma.Category_49CreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>
+        }
+        createMany: {
+          args: Prisma.Category_49CreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.Category_49CreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>[]
+        }
+        delete: {
+          args: Prisma.Category_49DeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>
+        }
+        update: {
+          args: Prisma.Category_49UpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>
+        }
+        deleteMany: {
+          args: Prisma.Category_49DeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.Category_49UpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.Category_49UpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>[]
+        }
+        upsert: {
+          args: Prisma.Category_49UpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Category_49Payload>
+        }
+        aggregate: {
+          args: Prisma.Category_49AggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateCategory_49>
+        }
+        groupBy: {
+          args: Prisma.Category_49GroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.Category_49GroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.Category_49CountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.Category_49CountAggregateOutputType> | number
+        }
+      }
+    }
+    Shop_49: {
+      payload: Prisma.$Shop_49Payload<ExtArgs>
+      fields: Prisma.Shop_49FieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.Shop_49FindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.Shop_49FindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>
+        }
+        findFirst: {
+          args: Prisma.Shop_49FindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.Shop_49FindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>
+        }
+        findMany: {
+          args: Prisma.Shop_49FindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>[]
+        }
+        create: {
+          args: Prisma.Shop_49CreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>
+        }
+        createMany: {
+          args: Prisma.Shop_49CreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.Shop_49CreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>[]
+        }
+        delete: {
+          args: Prisma.Shop_49DeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>
+        }
+        update: {
+          args: Prisma.Shop_49UpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>
+        }
+        deleteMany: {
+          args: Prisma.Shop_49DeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.Shop_49UpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.Shop_49UpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>[]
+        }
+        upsert: {
+          args: Prisma.Shop_49UpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Shop_49Payload>
+        }
+        aggregate: {
+          args: Prisma.Shop_49AggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateShop_49>
+        }
+        groupBy: {
+          args: Prisma.Shop_49GroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.Shop_49GroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.Shop_49CountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.Shop_49CountAggregateOutputType> | number
+        }
+      }
+    }
+    Blog_49: {
+      payload: Prisma.$Blog_49Payload<ExtArgs>
+      fields: Prisma.Blog_49FieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.Blog_49FindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.Blog_49FindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>
+        }
+        findFirst: {
+          args: Prisma.Blog_49FindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.Blog_49FindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>
+        }
+        findMany: {
+          args: Prisma.Blog_49FindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>[]
+        }
+        create: {
+          args: Prisma.Blog_49CreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>
+        }
+        createMany: {
+          args: Prisma.Blog_49CreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.Blog_49CreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>[]
+        }
+        delete: {
+          args: Prisma.Blog_49DeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>
+        }
+        update: {
+          args: Prisma.Blog_49UpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>
+        }
+        deleteMany: {
+          args: Prisma.Blog_49DeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.Blog_49UpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.Blog_49UpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>[]
+        }
+        upsert: {
+          args: Prisma.Blog_49UpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$Blog_49Payload>
+        }
+        aggregate: {
+          args: Prisma.Blog_49AggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateBlog_49>
+        }
+        groupBy: {
+          args: Prisma.Blog_49GroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.Blog_49GroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.Blog_49CountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.Blog_49CountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -694,6 +919,42 @@ export const GroceryScalarFieldEnum = {
 } as const
 
 export type GroceryScalarFieldEnum = (typeof GroceryScalarFieldEnum)[keyof typeof GroceryScalarFieldEnum]
+
+
+export const Category_49ScalarFieldEnum = {
+  cid: 'cid',
+  cname: 'cname',
+  size: 'size',
+  image_url: 'image_url',
+  remote_image_url: 'remote_image_url',
+  link_url: 'link_url'
+} as const
+
+export type Category_49ScalarFieldEnum = (typeof Category_49ScalarFieldEnum)[keyof typeof Category_49ScalarFieldEnum]
+
+
+export const Shop_49ScalarFieldEnum = {
+  pid: 'pid',
+  pname: 'pname',
+  cat_id: 'cat_id',
+  price: 'price',
+  img_url: 'img_url',
+  remote_img_url: 'remote_img_url'
+} as const
+
+export type Shop_49ScalarFieldEnum = (typeof Shop_49ScalarFieldEnum)[keyof typeof Shop_49ScalarFieldEnum]
+
+
+export const Blog_49ScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  descrip: 'descrip',
+  category: 'category',
+  img: 'img',
+  remote_img: 'remote_img'
+} as const
+
+export type Blog_49ScalarFieldEnum = (typeof Blog_49ScalarFieldEnum)[keyof typeof Blog_49ScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -872,6 +1133,9 @@ export type GlobalOmitConfig = {
   user?: Prisma.UserOmit
   post?: Prisma.PostOmit
   grocery?: Prisma.GroceryOmit
+  category_49?: Prisma.Category_49Omit
+  shop_49?: Prisma.Shop_49Omit
+  blog_49?: Prisma.Blog_49Omit
 }
 
 /* Types for Logging */
