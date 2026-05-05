@@ -51,7 +51,7 @@ const NavbarMain_49 = () => {
             <MenubarSeparator />
             <MenubarGroup>
               <MenubarItem>
-                Print... <MenubarShortcut>⌘P</MenubarShortcut>
+                Print... <MenubarShortcut>Ctrl+P</MenubarShortcut>
               </MenubarItem>
             </MenubarGroup>
           </MenubarContent>
@@ -61,34 +61,11 @@ const NavbarMain_49 = () => {
           <MenubarContent>
             <MenubarGroup>
               <MenubarItem>
-                Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+                <Link href='/quiz1_49/blog_49'>Blog_49</Link>
               </MenubarItem>
               <MenubarItem>
-                Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+                <Link href='/quiz1_49/blog_db_49'>Blog_db_49</Link>
               </MenubarItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarSub>
-                <MenubarSubTrigger>Find</MenubarSubTrigger>
-                <MenubarSubContent>
-                  <MenubarGroup>
-                    <MenubarItem>Search the web</MenubarItem>
-                  </MenubarGroup>
-                  <MenubarSeparator />
-                  <MenubarGroup>
-                    <MenubarItem>Find...</MenubarItem>
-                    <MenubarItem>Find Next</MenubarItem>
-                    <MenubarItem>Find Previous</MenubarItem>
-                  </MenubarGroup>
-                </MenubarSubContent>
-              </MenubarSub>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem>Cut</MenubarItem>
-              <MenubarItem>Copy</MenubarItem>
-              <MenubarItem>Paste</MenubarItem>
             </MenubarGroup>
           </MenubarContent>
         </MenubarMenu>
@@ -102,10 +79,10 @@ const NavbarMain_49 = () => {
             <MenubarSeparator />
             <MenubarGroup>
               <MenubarItem inset>
-                Reload <MenubarShortcut>⌘R</MenubarShortcut>
+                Reload <MenubarShortcut>Ctrl+R</MenubarShortcut>
               </MenubarItem>
               <MenubarItem disabled inset>
-                Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+                Force Reload <MenubarShortcut>Shift+Ctrl+R</MenubarShortcut>
               </MenubarItem>
             </MenubarGroup>
             <MenubarSeparator />
@@ -146,10 +123,10 @@ const NavbarMain_49 = () => {
             <MenubarSeparator />
             <MenubarGroup>
               <MenubarItem inset>
-                Reload <MenubarShortcut>⌘R</MenubarShortcut>
+                Reload <MenubarShortcut>Ctrl+R</MenubarShortcut>
               </MenubarItem>
               <MenubarItem disabled inset>
-                Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+                Force Reload <MenubarShortcut>Shift+Ctrl+R</MenubarShortcut>
               </MenubarItem>
             </MenubarGroup>
             <MenubarSeparator />

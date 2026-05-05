@@ -1,8 +1,16 @@
+// next.config.js
 import type { NextConfig } from 'next';
+const path = require('path');
 
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  compiler: {
+    styledComponents: true,
+  },
+  turbopack: {
+    root: path.join(__dirname, '..'),
+  },
   images: {
     remotePatterns: [
       {
@@ -16,3 +24,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+ 
