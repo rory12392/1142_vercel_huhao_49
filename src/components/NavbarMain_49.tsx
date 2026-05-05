@@ -61,10 +61,10 @@ const NavbarMain_49 = () => {
           <MenubarContent>
             <MenubarGroup>
               <MenubarItem>
-                <Link href='/quiz1_49/blog_49'>Blog_49</Link>
+                <Link href='/quiz1_49/blog_49'>Quiz1:Blog_49</Link>
               </MenubarItem>
               <MenubarItem>
-                <Link href='/quiz1_49/blog_db_49'>Blog_db_49</Link>
+                <Link href='/quiz1_49/blog_db_49'>Quiz1:Blog_db_49</Link>
               </MenubarItem>
             </MenubarGroup>
           </MenubarContent>
