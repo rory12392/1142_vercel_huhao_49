@@ -8,8 +8,8 @@ import Wrapper from '../_assets/wrapper/Blog2_49';
 import Alert_49 from '../_components/Alert_49';
 
 const BlogLocalJsonPage2_49 = () => {
-  const [name, setName] = useState('htchung');
-  const [id, setId] = useState(123456789);
+  const [name, setName] = useState('huhao');
+  const [id, setId] = useState(213417149);
   const [blogs_49, setBlogs_49] = useState(blogData_49);
   const [alert, setAlert] = useState({
     show: false,
