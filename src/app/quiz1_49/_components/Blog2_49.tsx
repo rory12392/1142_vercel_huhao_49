@@ -3,7 +3,7 @@
 import { FaGlobe } from 'react-icons/fa6';
 import { FaMugSaucer } from 'react-icons/fa6';
 import Link from 'next/link';
-import { deleteBlog_49 } from '@/actions/blog.action_xx';
+import { deleteBlog_49 } from '@/actions/blog.action_49';
 
 type Blog = {
   id: number;

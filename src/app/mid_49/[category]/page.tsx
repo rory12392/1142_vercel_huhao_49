@@ -1,4 +1,4 @@
-import Product_xx from '../_components/Product_49';
+import Product_49 from '../_components/Product_49';
 import Wrapper from '../_assets/wrappers/Shop_49';
 
 import { prisma } from '@/lib/prisma';
@@ -12,7 +12,7 @@ type Product = {
   remote_img_url: string | null;
 };
 
-const FetchProductsByCategory_xx = async ({
+const FetchProductsByCategory_49 = async ({
   params,
 }: {
   params: Promise<{ category: string }>;
@@ -20,7 +20,7 @@ const FetchProductsByCategory_xx = async ({
   const { category } = await params;
   // console.log('category param:', category);
 
-  const categoryRecord = await prisma.category_xx.findFirst({
+  const categoryRecord = await prisma.category_49.findFirst({
     where: { cname: category },
   });
 
@@ -28,11 +28,11 @@ const FetchProductsByCategory_xx = async ({
     return <div>Category not found</div>;
   }
 
-  const shop_xx = await prisma.shop_xx.findMany({
+  const shop_49 = await prisma.shop_49.findMany({
     where: { cat_id: categoryRecord.cid },
   });
 
-  // console.log('Products by category :', shop_xx);
+  // console.log('Products by category :', shop_49);
 
   return (
     <Wrapper>
@@ -43,10 +43,10 @@ const FetchProductsByCategory_xx = async ({
         <div className='collection-page'>
           <h1 className='title'>{category}</h1>
           <div className='items'>
-            {shop_xx?.map((item: Product) => {
+            {shop_49?.map((item: Product) => {
               const { pid, img_url, pname, price } = item;
               return (
-                <Product_xx
+                <Product_49
                   key={pid}
                   pid={pid}
                   img_url={img_url}
@@ -62,4 +62,4 @@ const FetchProductsByCategory_xx = async ({
   );
 };
 
-export default FetchProductsByCategory_xx;
+export default FetchProductsByCategory_49;

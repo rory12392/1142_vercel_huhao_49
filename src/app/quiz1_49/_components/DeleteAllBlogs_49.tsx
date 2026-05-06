@@ -1,4 +1,4 @@
-import { deleteAllBlog_49 } from '@/actions/blog.action_xx';
+import { deleteAllBlog_49 } from '@/actions/blog.action_49';
 
 const DeleteAllBlogs_49 = () => {
   return (

@@ -1,7 +1,7 @@
 import Wrapper from '../_assets/wrappers/Shop_49';
-import DeleteProduct_xx from './DeleteProduct_49';
+import DeleteProduct_49 from './DeleteProduct_49';
 
-const Product_xx = ({ img_url, pname, price, pid }) => {
+const Product_49 = ({ img_url, pname, price, pid }) => {
   return (
     <Wrapper>
       <div className='collection-item'>
@@ -12,10 +12,10 @@ const Product_xx = ({ img_url, pname, price, pid }) => {
         </div>
         <div className='flex justify-between items-center gap-4 custom-button'>
           <button>Add to Cart</button>
-          <DeleteProduct_xx pid={pid} />
+          <DeleteProduct_49 pid={pid} />
         </div>
       </div>
     </Wrapper>
   );
 };
-export default Product_xx;
+export default Product_49;

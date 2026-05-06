@@ -1,14 +1,11 @@
-import { createGrocery } from "@/actions/grocery.action_49";
+import { createGrocery } from '@/actions/grocery.action_49';
 
-const Form_xx = () => {
+const Form_49 = () => {
   return (
     <form action={createGrocery}>
       <h4>grocery bud(DB)</h4>
       <div className='form-control'>
-        <input
-          type='text'
-          className='form-input'
-          name='name'/>
+        <input type='text' className='form-input' name='name' />
         <button type='submit' className='btn'>
           add item
         </button>
@@ -16,4 +13,4 @@ const Form_xx = () => {
     </form>
   );
 };
-export default Form_xx;
+export default Form_49;

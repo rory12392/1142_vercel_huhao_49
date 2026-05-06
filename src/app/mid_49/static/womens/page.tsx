@@ -1,12 +1,12 @@
 import Wrapper from '../../_assets/wrappers/Shop_49';
 
-const StaticPage_xx = () => {
+const StaticPage_49 = () => {
   return (
     <Wrapper>
       <div className='shop-page'>
         <div className='section-title'>
-          <h3> P1_StaticPage_xx, </h3>
-          <h4 className='text-center'> Hsingtai Chung, 123456789 </h4>
+          <h3> P1_StaticPage_49, </h3>
+          <h4 className='text-center'> huhao, 213417149 </h4>
         </div>
         <div className='collection-page'>
           <h1 className='title'>Womens</h1>
@@ -95,4 +95,4 @@ const StaticPage_xx = () => {
   );
 };
 
-export default StaticPage_xx;
+export default StaticPage_49;

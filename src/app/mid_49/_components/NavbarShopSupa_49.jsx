@@ -1,12 +1,12 @@
-import Wrapper from '@/assets/wrappers/midterm/Shop_xx';
+import Wrapper from '@/assets/wrappers/midterm/Shop_49';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
 
-const NavbarShopSupa_xx = () => {
+const NavbarShopSupa_49 = () => {
   return (
     <Wrapper>
       <div className='header'>
-        <Link href='/demo/shop_xx/supabase' className='logo-container'>
+        <Link href='/demo/shop_49/supabase' className='logo-container'>
           <img src='/images/midterm/assets/crown.svg' />
         </Link>
         <div className='options'>
@@ -56,4 +56,4 @@ const NavbarShopSupa_xx = () => {
     </Wrapper>
   );
 };
-export default NavbarShopSupa_xx;
+export default NavbarShopSupa_49;

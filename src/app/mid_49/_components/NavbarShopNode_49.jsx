@@ -2,11 +2,11 @@ import Wrapper from '../_assets/wrappers/Shop_49';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
 
-const NavbarShopNode_xx = () => {
+const NavbarShopNode_49 = () => {
   return (
     <Wrapper>
       <div className='header'>
-        <Link href='/mid_xx' className='logo-container'>
+        <Link href='/mid_49' className='logo-container'>
           <img src='/images/midterm/assets/crown.svg' />
         </Link>
         <div className='options'>
@@ -56,4 +56,4 @@ const NavbarShopNode_xx = () => {
     </Wrapper>
   );
 };
-export default NavbarShopNode_xx;
+export default NavbarShopNode_49;

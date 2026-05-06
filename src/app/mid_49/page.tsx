@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 import { prisma } from '@/lib/prisma';
 
-const fetchCategory_xx = async () => {
-  const categories = await prisma.category_xx.findMany();
+const fetchCategory_49 = async () => {
+  const categories = await prisma.category_49.findMany();
   return categories;
 };
 
-const StaticPage_xx = async () => {
-  const categories_xx = await fetchCategory_xx();
-  // console.log('Fetched categories:', categories_xx);
+const StaticPage_49 = async () => {
+  const categories_49 = await fetchCategory_49();
+  // console.log('Fetched categories:', categories_49);
   return (
     <Wrapper>
       <div className='max-w-4xl mx-auto shop-page'>
@@ -19,7 +19,7 @@ const StaticPage_xx = async () => {
         </div>
         <div className='homepage'>
           <div className='directory-menu'>
-            {categories_xx?.map((item) => {
+            {categories_49?.map((item) => {
               const { cid, cname, size, image_url } = item;
               return (
                 <div className={`${size} menu-item`} key={cid}>
@@ -28,7 +28,7 @@ const StaticPage_xx = async () => {
                     src={image_url || 'default.jpg'}
                     alt=''
                   />
-                  <Link href={`/mid_xx/${cname}`} className='content'>
+                  <Link href={`/mid_49/${cname}`} className='content'>
                     <h1 className='title'>{item.cname}</h1>
                     <span className='subtitle'>SHOP NOW</span>
                   </Link>
@@ -42,4 +42,4 @@ const StaticPage_xx = async () => {
   );
 };
 
-export default StaticPage_xx;
+export default StaticPage_49;

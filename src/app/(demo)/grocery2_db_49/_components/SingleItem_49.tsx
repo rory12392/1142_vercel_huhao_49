@@ -1,6 +1,6 @@
 'use client';
 
-import DeleteButton_xx from './DeleteButton_49';
+import DeleteButton_49 from './DeleteButton_49';
 import { editGrocery } from '@/actions/grocery.action_49';
 
 type GroceryItem = {
@@ -9,13 +9,13 @@ type GroceryItem = {
   completed: boolean;
 };
 
-const SingleItem_xx = ({ item }: { item: GroceryItem }) => {
+const SingleItem_49 = ({ item }: { item: GroceryItem }) => {
   return (
-    <div className="single-item">
+    <div className='single-item'>
       <input
-        type="checkbox"
+        type='checkbox'
         checked={item.completed}
-        name="completed"
+        name='completed'
         onChange={() => editGrocery(item.id, !item.completed)}
       />
 
@@ -28,9 +28,9 @@ const SingleItem_xx = ({ item }: { item: GroceryItem }) => {
         {item.name}
       </p>
 
-      <DeleteButton_xx id={item.id} />
+      <DeleteButton_49 id={item.id} />
     </div>
   );
 };
 
-export default SingleItem_xx;
+export default SingleItem_49;

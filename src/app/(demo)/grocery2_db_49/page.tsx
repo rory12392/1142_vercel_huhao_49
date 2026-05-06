@@ -1,16 +1,16 @@
 import Wrapper from '../_assets/wrapper/Grocery_xx';
 
-import Form_xx from './_components/Form_xx';
-import Items_xx from './_components/Items_xx';
+import Form_49 from './_components/Form_49';
+import Items_49 from './_components/Items_49';
 
-const GroceryPage_xx = () => {
+const GroceryPage_49 = () => {
   return (
     <Wrapper>
       <section className='section-center'>
-        <Form_xx />
-        <Items_xx />
+        <Form_49 />
+        <Items_49 />
       </section>
     </Wrapper>
   );
 };
-export default GroceryPage_xx;
+export default GroceryPage_49;

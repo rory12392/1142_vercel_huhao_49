@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import Navbar_xx from './_components/NavbarShopNode_49';
+import Navbar_49 from './_components/NavbarShopNode_49';
 
 import StyledComponentsRegistry from '@/lib/registry';
 
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistLocalFont.className} ${geistMonoLocalFont.className} antialiased`}
       >
-        <Navbar_xx />
+        <Navbar_49 />
         <StyledComponentsRegistry>
           <main className='max-w-3xl mx-auto py-4'>{children}</main>
         </StyledComponentsRegistry>

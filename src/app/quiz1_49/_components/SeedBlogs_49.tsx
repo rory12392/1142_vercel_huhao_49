@@ -1,4 +1,4 @@
-import { SeedBlog_49 } from '@/actions/blog.action_xx';
+import { SeedBlog_49 } from '@/actions/blog.action_49';
 
 const SeedBlogs_49 = () => {
   return (
