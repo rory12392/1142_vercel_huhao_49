@@ -17,6 +17,7 @@ import {
 import Link from 'next/link';
 
 import { ModeToggle } from './ModeToggle';
+import { Button } from '@/components/ui/button';
 
 const NavbarMain_49 = () => {
   return (
@@ -140,6 +141,14 @@ const NavbarMain_49 = () => {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
+      <div className='flex items-center gap-4'>
+        <Link href='/store_49'>
+          <Button variant='outline'>Store</Button>
+        </Link>
+        <Link href='/'>
+          <Button variant='outline'>TKUdemo</Button>
+        </Link>
+      </div>
       <div>
         <ModeToggle />
       </div>
