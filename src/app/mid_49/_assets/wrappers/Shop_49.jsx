@@ -254,7 +254,7 @@ const Wrapper = styled.div`
   }
 
   .collection-item {
-    width: 22vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     height: 260px;

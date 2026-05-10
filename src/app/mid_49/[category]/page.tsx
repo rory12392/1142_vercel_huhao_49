@@ -38,7 +38,7 @@ const FetchProductsByCategory_49 = async ({
     <Wrapper>
       <div className='shop-page'>
         <div className='section-title'>
-          <h4> Hsingtai Chung, 123456789 </h4>
+          <h4> Hu Hao, 213417149 </h4>
         </div>
         <div className='collection-page'>
           <h1 className='title'>{category}</h1>

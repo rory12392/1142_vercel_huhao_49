@@ -1,16 +1,16 @@
-import SingleItem_xx from './SingleItem_xx';
+import SingleItem_49 from './SingleItem_49';
 import { fetchGrocery } from '@/actions/grocery.action_49';
 
-const Items_xx = async () => {
+const Items_49 = async () => {
   const items = await fetchGrocery();
 
   return (
     <div className="items">
       {items.map((item) => {
-        return <SingleItem_xx key={item.id} item={item} />;
+        return <SingleItem_49 key={item.id} item={item} />;
       })}
     </div>
   );
 };
 
-export default Items_xx;
+export default Items_49;

@@ -27,15 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${geistLocalFont.className} ${geistMonoLocalFont.className} antialiased`}
-      >
-        <Navbar_49 />
-        <StyledComponentsRegistry>
-          <main className='max-w-3xl mx-auto py-4'>{children}</main>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
+    <>
+      <Navbar_49 />
+      <StyledComponentsRegistry>
+        <main className='max-w-7xl mx-auto py-4 px-8'>
+          {children}
+        </main>
+      </StyledComponentsRegistry>
+    </>
   );
 }
+
+

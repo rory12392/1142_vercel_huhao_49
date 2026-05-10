@@ -72,27 +72,11 @@ const NavbarMain_49 = () => {
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger>Midterm</MenubarTrigger>
-          <MenubarContent className='w-44'>
+          <MenubarContent>
             <MenubarGroup>
-              <MenubarCheckboxItem>Bookmarks Bar</MenubarCheckboxItem>
-              <MenubarCheckboxItem checked>Full URLs</MenubarCheckboxItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem inset>
-                Reload <MenubarShortcut>Ctrl+R</MenubarShortcut>
+              <MenubarItem>
+                <Link href='/mid_49'>mid_49</Link>
               </MenubarItem>
-              <MenubarItem disabled inset>
-                Force Reload <MenubarShortcut>Shift+Ctrl+R</MenubarShortcut>
-              </MenubarItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem inset>Hide Sidebar</MenubarItem>
             </MenubarGroup>
           </MenubarContent>
         </MenubarMenu>

@@ -1,4 +1,4 @@
-const SingleItem_xx = ({ item, removeItem, editItem }) => {
+const SingleItem_49 = ({ item, removeItem, editItem }) => {
   return (
     <div className='single-item'>
       <input
@@ -24,4 +24,4 @@ const SingleItem_xx = ({ item, removeItem, editItem }) => {
     </div>
   );
 };
-export default SingleItem_xx;
+export default SingleItem_49;

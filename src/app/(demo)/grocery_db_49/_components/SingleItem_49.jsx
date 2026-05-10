@@ -1,9 +1,9 @@
 'use client';
 
-import DeleteButton_xx from './DeleteButton_49';
+import DeleteButton_49 from './DeleteButton_49';
 import { editGrocery } from '@/actions/grocery.action_49';
 
-const SingleItem_xx = ({ item }) => {
+const SingleItem_49 = ({ item }) => {
   return (
     <div className="single-item flex items-center gap-2">
 
@@ -23,9 +23,9 @@ const SingleItem_xx = ({ item }) => {
         {item.name}
       </p>
 
-      <DeleteButton_xx id={item.id} />
+      <DeleteButton_49 id={item.id} />
     </div>
   );
 };
 
-export default SingleItem_xx;
+export default SingleItem_49;

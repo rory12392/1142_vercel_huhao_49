@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import Form from './_components/Form_xx';
+import Form from './_components/Form_49';
 import { nanoid } from 'nanoid';
-import Items from './_components/Items_xx';
+import Items from './_components/Items_49';
 import { ToastContainer, toast } from 'react-toastify';
 
-import Wrapper from '../_assets/wrapper/Grocery_xx';
+import Wrapper from '../_assets/wrapper/Grocery_49';
 
 // 1. Fix the utility function
 const getLocalStorage = () => {
@@ -26,7 +26,7 @@ const setLocalStorage = (items) => {
   localStorage.setItem('list', JSON.stringify(items));
 };
 
-const GroceryPage_xx = () => {
+const GroceryPage_49 = () => {
   const [items, setItems] = useState(() => getLocalStorage());
 
   const addItem = (itemName) => {
@@ -69,4 +69,4 @@ const GroceryPage_xx = () => {
     </Wrapper>
   );
 };
-export default GroceryPage_xx;
+export default GroceryPage_49;

@@ -1,4 +1,4 @@
-import SingleItem from './SingleItem_xx';
+import SingleItem from './SingleItem_49';
 
 const Items = ({ items, removeItem, editItem }) => {
   return (

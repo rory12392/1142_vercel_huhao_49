@@ -1,13 +1,13 @@
 import Wrapper from '../_assets/wrappers/Shop_49';
-import NavbarShop_xx from '../_components/NavbarShopNode_49';
+import NavbarShop_49 from '../_components/NavbarShopNode_49';
 import Link from 'next/link';
 
-const ShopNodeMainPage_xx = () => {
+const ShopNodeMainPage_49 = () => {
   return (
     <Wrapper>
       <div className='midterm'>
         <div className='section-title'>
-          <h4> Hsingtai Chung, 123456789 </h4>
+          <h4> Hu Hao, 213417149 </h4>
         </div>
         <div className='homepage'>
           <div className='directory-menu'>
@@ -17,7 +17,7 @@ const ShopNodeMainPage_xx = () => {
                 src='/images/midterm/homepage/hats.png'
                 alt=''
               />
-              <Link href='/mid_xx/static/hats' className='content'>
+              <Link href='/mid_49/static/hats' className='content'>
                 <h1 className='title'>HATS</h1>
                 <span className='subtitle'>SHOP NOW</span>
               </Link>
@@ -28,7 +28,7 @@ const ShopNodeMainPage_xx = () => {
                 src='/images/midterm/homepage/jackets.png'
                 alt=''
               />
-              <Link href='/mid_xx/static/jackets' className='content'>
+              <Link href='/mid_49/static/jackets' className='content'>
                 <h1 className='title'>JACKETS</h1>
                 <span className='subtitle'>SHOP NOW</span>
               </Link>
@@ -39,7 +39,7 @@ const ShopNodeMainPage_xx = () => {
                 src='/images/midterm/homepage/sneakers.png'
                 alt=''
               />
-              <Link href='/mid_xx/static/sneakers' className='content'>
+              <Link href='/mid_49/static/sneakers' className='content'>
                 <h1 className='title'>SNEAKERS</h1>
                 <span className='subtitle'>SHOP NOW</span>
               </Link>
@@ -50,7 +50,7 @@ const ShopNodeMainPage_xx = () => {
                 src='/images/midterm/homepage/womens.png'
                 alt=''
               />
-              <Link href='/mid_xx/static/womens' className='content'>
+              <Link href='/mid_49/static/womens' className='content'>
                 <h1 className='title'>WOMENS</h1>
                 <span className='subtitle'>SHOP NOW</span>
               </Link>
@@ -61,7 +61,7 @@ const ShopNodeMainPage_xx = () => {
                 src='/images/midterm/homepage/mens.png'
                 alt=''
               />
-              <Link href='/mid_xx/static/mens' className='content'>
+              <Link href='/mid_49/static/mens' className='content'>
                 <h1 className='title'>MENS</h1>
                 <span className='subtitle'>SHOP NOW</span>
               </Link>
@@ -73,4 +73,4 @@ const ShopNodeMainPage_xx = () => {
   );
 };
 
-export default ShopNodeMainPage_xx;
+export default ShopNodeMainPage_49;

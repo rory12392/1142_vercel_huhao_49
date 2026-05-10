@@ -1,6 +1,6 @@
 import { createGrocery } from "@/actions/grocery.action_49";
 
-const Form_xx = () => {
+const Form_49 = () => {
   return (
     <form action={createGrocery}>
       <h4>grocery bud(DB)</h4>
@@ -16,4 +16,4 @@ const Form_xx = () => {
     </form>
   );
 };
-export default Form_xx;
+export default Form_49;

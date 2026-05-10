@@ -1,6 +1,6 @@
 import { removeGrocery } from '@/actions/grocery.action_49';
 
-const DeleteButton_xx = ({ id }: { id: string }) => {
+const DeleteButton_49 = ({ id }: { id: string }) => {
   const removeGroceryWithId = removeGrocery.bind(null, id);
 
   return (
@@ -16,4 +16,4 @@ const DeleteButton_xx = ({ id }: { id: string }) => {
   );
 };
 
-export default DeleteButton_xx;
+export default DeleteButton_49;
