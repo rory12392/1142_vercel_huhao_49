@@ -56,3 +56,99 @@ model Blog_49 {
   img        String?
   remote_img String?
 }
+
+model Product {
+  id          String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String
+  company     String
+  description String
+  featured    Boolean
+  image       String
+  price       Int
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  clerkId     String
+  CartItem    CartItem[]
+  Favorite    Favorite[]
+  Review      Review[]
+
+  @@index([clerkId])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Cart {
+  id             String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  clerkId        String
+  numItemsInCart Int        @default(0)
+  cartTotal      Int        @default(0)
+  shipping       Int        @default(5)
+  tax            Int        @default(0)
+  taxRate        Float      @default(0.1)
+  orderTotal     Int        @default(0)
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime
+  CartItem       CartItem[]
+
+  @@index([clerkId])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model CartItem {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  productId String   @db.Uuid
+  cartId    String   @db.Uuid
+  amount    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  Product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([cartId])
+  @@index([productId])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Favorite {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  clerkId   String
+  productId String   @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([clerkId])
+  @@index([productId])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Order {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  clerkId    String
+  products   Int      @default(0)
+  orderTotal Int      @default(0)
+  tax        Int      @default(0)
+  shipping   Int      @default(0)
+  email      String
+  isPaid     Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+
+  @@index([clerkId])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Review {
+  id             String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  clerkId        String
+  rating         Int
+  comment        String
+  authorName     String
+  authorImageUrl String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime
+  productId      String   @db.Uuid
+  Product        Product  @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([clerkId])
+  @@index([productId])
+}

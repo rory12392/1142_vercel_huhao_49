@@ -71,3 +71,8 @@ export type Shop_49 = Prisma.Shop_49Model
  * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
  */
 export type Blog_49 = Prisma.Blog_49Model
+/**
+ * Model Product
+ * 
+ */
+export type Product = Prisma.ProductModel
