@@ -35,9 +35,9 @@ interface StoreSignInOutProps {
 
 const StoreSignInOut_49 = ({ isAdminUser }: StoreSignInOutProps) => {
   const { isSignedIn, user } = useUser();
-  console.log('isSignedIn', isSignedIn);
-  console.log('isAdminUser', isAdminUser);
-  console.log('user', user);
+  // console.log('isSignedIn', isSignedIn);
+  // console.log('isAdminUser', isAdminUser);
+  // console.log('user', user);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -63,9 +63,7 @@ const StoreSignInOut_49 = ({ isAdminUser }: StoreSignInOutProps) => {
               </Link>
             </SignInButton>
           </DropdownMenuItem>
-
           <DropdownMenuSeparator />
-
           <DropdownMenuItem>
             <SignUpButton>
               <Link href='#' className='w-full text-left'>
