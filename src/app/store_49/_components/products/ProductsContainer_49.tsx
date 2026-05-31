@@ -4,6 +4,7 @@ import { LuLayoutGrid, LuList } from 'react-icons/lu';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import { fetchAllProducts } from '../../_utils/action';
 
 async function ProductsContainer_49({
   layout,
@@ -12,20 +13,24 @@ async function ProductsContainer_49({
   layout: string;
   search: string;
 }) {
-  ('');
+  const products = await fetchAllProducts({ search });
+  const totalProducts = products.length;
+  const searchTerm = search ? `&search=${search}` : '';
   return (
     <>
       {/* HEADER */}
       <section>
         <div className='flex justify-between items-center'>
-          <h4 className='font-medium text-lg'>4 products</h4>
+          <h4 className='font-medium text-lg'>
+            {totalProducts} product{totalProducts > 1 && 's'}
+          </h4>
           <div className='flex gap-x-4'>
             <Button
               variant={layout === 'grid' ? 'default' : 'ghost'}
               size='icon'
               asChild
             >
-              <Link href={`#`}>
+              <Link href={`/store_49/products_49?layout=grid&${searchTerm}`}>
                 <LuLayoutGrid />
               </Link>
             </Button>
@@ -34,7 +39,7 @@ async function ProductsContainer_49({
               size='icon'
               asChild
             >
-              <Link href={`#`}>
+              <Link href={`/store_49/products_49?layout=list&${searchTerm}`}>
                 <LuList />
               </Link>
             </Button>
@@ -44,7 +49,11 @@ async function ProductsContainer_49({
       </section>
       {/* PRODUCTS */}
       <div>
-        <h2>Show Products</h2>
+        {layout === 'grid' ? (
+          <ProductsGrid_49 products={products} />
+        ) : (
+          <ProductsList_49 products={products} />
+        )}
       </div>
     </>
   );

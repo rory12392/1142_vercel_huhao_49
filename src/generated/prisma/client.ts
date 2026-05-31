@@ -76,3 +76,28 @@ export type Blog_49 = Prisma.Blog_49Model
  * 
  */
 export type Product = Prisma.ProductModel
+/**
+ * Model Cart
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Cart = Prisma.CartModel
+/**
+ * Model CartItem
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type CartItem = Prisma.CartItemModel
+/**
+ * Model Favorite
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Favorite = Prisma.FavoriteModel
+/**
+ * Model Order
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Order = Prisma.OrderModel
+/**
+ * Model Review
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Review = Prisma.ReviewModel
