@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 import LogoStore_49 from './LogoStore_49';
 import { ModeToggle } from './ModeToggle';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,9 @@ const NavbarStore_49 = () => {
   return (
     <div className='flex items-center justify-around mx-auto py-4 bg-amber-100 dark:bg-gray-700'>
       <LogoStore_49 />
-      <NavSearch_49 />
+      <Suspense>
+        <NavSearch_49 />
+      </Suspense>
 
       <div className='flex items-center gap-4'>
         <Link href='/'>
