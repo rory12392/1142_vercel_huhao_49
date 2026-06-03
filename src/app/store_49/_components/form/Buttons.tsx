@@ -1,6 +1,6 @@
 'use client';
 
-import { ReloadIcon } from '@radix-ui/react-icons';
+import { Loader2 } from 'lucide-react';
 import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -31,7 +31,7 @@ export function SubmitButton({
     >
       {pending ? (
         <>
-          <ReloadIcon className='mr-2 h-4 w-4 animate-spin' />
+          <Loader2 className='mr-2 h-4 w-4 animate-spin' />
           Please wait...
         </>
       ) : (
@@ -64,7 +64,7 @@ export const IconButton = ({ actionType }: { actionType: actionType }) => {
       variant='link'
       className='p-2 cursor-pointer'
     >
-      {pending ? <ReloadIcon className='animate-spin' /> : renderIcon()}
+      {pending ? <Loader2 className='animate-spin' /> : renderIcon()}
     </Button>
   );
 };
@@ -95,7 +95,7 @@ export const CardSubmitButton = ({ isFavorite }: { isFavorite: boolean }) => {
       className='p-2 cursor-pointer'
     >
       {pending ? (
-        <ReloadIcon className='animate-spin' />
+        <Loader2 className='animate-spin' />
       ) : isFavorite ? (
         <FaHeart />
       ) : (
