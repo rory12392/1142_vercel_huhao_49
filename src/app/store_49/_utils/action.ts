@@ -8,6 +8,8 @@ import { currentUser, auth } from '@clerk/nextjs/server';
 
 import { deleteImage, uploadImage } from './supabase';
 
+import { productSchema, validateWithZodSchema } from './schemas';
+
 export type Product = Prisma.ProductGetPayload<object>;
 
 const getAuthUser = async () => {
@@ -88,4 +90,112 @@ export const fetchAdminOrders = async () => {
   });
 
   return orders;
+};
+
+export const createProductAction = async (
+  prevState: any,
+  formData: FormData,
+): Promise<{ message: string }> => {
+  const user = await getAuthUser();
+
+  try {
+    const name = formData.get('name') as string;
+    const company = formData.get('company') as string;
+    const price = Number(formData.get('price') as string);
+    const image = formData.get('image') as string;
+    // const image = formData.get('image') as File;
+    const description = formData.get('description') as string;
+    const featured = Boolean(formData.get('featured') as string);
+
+    await prisma.product.create({
+      data: {
+        name,
+        company,
+        price,
+        image,
+        // image: '/images/store/product-1.jpg',
+        description,
+        featured,
+        clerkId: user.id,
+      },
+    });
+    return { message: 'product created' };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+export const createProductAction2 = async (
+  prevState: any,
+  formData: FormData,
+): Promise<{ message: string }> => {
+  const user = await getAuthUser();
+
+  try {
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = productSchema.parse(rawData);
+
+    await prisma.product.create({
+      data: {
+        ...validatedFields,
+        image: '/images/store/product-1.jpg',
+        clerkId: user.id,
+      },
+    });
+    return { message: 'product created' };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+export const deleteProductAction = async (prevState: { productId: string }) => {
+  const { productId } = prevState;
+  await getAdminUser();
+  try {
+    const product = await prisma.product.delete({
+      where: {
+        id: productId,
+      },
+    });
+    // await deleteImage(product.image);
+    revalidatePath('/store_49/admin_49/products_49');
+    return { message: 'product removed' };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+export const fetchAdminProductDetails = async (productId: string) => {
+  await getAdminUser();
+  const product = await prisma.product.findUnique({
+    where: {
+      id: productId,
+    },
+  });
+  if (!product) redirect('/store_49/admin_49/products_49');
+  return product;
+};
+
+export const updateProductAction = async (
+  prevState: any,
+  formData: FormData,
+) => {
+  await getAdminUser();
+  try {
+    const productId = formData.get('id') as string;
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = validateWithZodSchema(productSchema, rawData);
+
+    await prisma.product.update({
+      where: {
+        id: productId,
+      },
+      data: {
+        ...validatedFields,
+      },
+    });
+    revalidatePath(`/store_49/admin_49/products_49/${productId}/edit`);
+    return { message: 'Product updated successfully' };
+  } catch (error) {
+    return renderError(error);
+  }
 };
