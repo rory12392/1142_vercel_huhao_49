@@ -1,3 +1,4 @@
+// admin_xx/create/page1.tsx
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -32,3 +33,4 @@ const CreateProductPage = () => {
   );
 };
 export default CreateProductPage;
+ 

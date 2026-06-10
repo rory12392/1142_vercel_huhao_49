@@ -93,7 +93,8 @@ export const fetchAdminOrders = async () => {
 };
 
 export const createProductAction = async (
-  prevState: any,
+  //prevState: any,
+  prevState: { message: string },
   formData: FormData,
 ): Promise<{ message: string }> => {
   const user = await getAuthUser();
@@ -126,7 +127,7 @@ export const createProductAction = async (
 };
 
 export const createProductAction2 = async (
-  prevState: any,
+  prevState: { message: string },
   formData: FormData,
 ): Promise<{ message: string }> => {
   const user = await getAuthUser();
@@ -138,7 +139,6 @@ export const createProductAction2 = async (
     await prisma.product.create({
       data: {
         ...validatedFields,
-        image: '/images/store/product-1.jpg',
         clerkId: user.id,
       },
     });
@@ -176,7 +176,7 @@ export const fetchAdminProductDetails = async (productId: string) => {
 };
 
 export const updateProductAction = async (
-  prevState: any,
+  prevState: { message: string },
   formData: FormData,
 ) => {
   await getAdminUser();
