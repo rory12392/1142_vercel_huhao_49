@@ -72,7 +72,7 @@ const FetchProductsByCategory_49 = async ({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {shop_49?.map((item: Product) => {
+          {shop_49?.map((item) => {
             const { pid: pid, pname, cat_id, price } = item;
             return (
               <TableRow key={pid}>

@@ -5,11 +5,11 @@ import { prisma } from '@/lib/prisma';
 
 type Product = {
   pid: string;
-  pname: string;
-  cat_id: number;
-  price: number;
-  img_url: string;
-  remote_img_url: string;
+  pname: string | null;
+  cat_id: number | null;
+  price: number | null;
+  img_url: string | null;
+  remote_img_url: string | null;
 };
 
 const FetchProductsByCategory_49 = async ({
@@ -43,15 +43,15 @@ const FetchProductsByCategory_49 = async ({
         <div className='collection-page'>
           <h1 className='title'>{category}</h1>
           <div className='items'>
-            {shop_49?.map((item: Product) => {
+            {shop_49?.map((item) => {
               const { pid, img_url, pname, price } = item;
               return (
                 <Product_49
                   key={pid}
                   pid={pid}
-                  img_url={img_url}
-                  pname={pname}
-                  price={price}
+                  img_url={img_url ?? ''}
+                  pname={pname ?? ''}
+                  price={price ?? 0}
                 />
               );
             })}
