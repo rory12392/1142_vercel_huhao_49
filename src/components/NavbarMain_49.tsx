@@ -102,25 +102,9 @@ const NavbarMain_49 = () => {
           <MenubarTrigger>Final</MenubarTrigger>
           <MenubarContent className='w-44'>
             <MenubarGroup>
-              <MenubarCheckboxItem>Bookmarks Bar</MenubarCheckboxItem>
-              <MenubarCheckboxItem checked>Full URLs</MenubarCheckboxItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem inset>
-                Reload <MenubarShortcut>Ctrl+R</MenubarShortcut>
+              <MenubarItem>
+                <Link href='/final_49'>Final_49</Link>
               </MenubarItem>
-              <MenubarItem disabled inset>
-                Force Reload <MenubarShortcut>Shift+Ctrl+R</MenubarShortcut>
-              </MenubarItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-            </MenubarGroup>
-            <MenubarSeparator />
-            <MenubarGroup>
-              <MenubarItem inset>Hide Sidebar</MenubarItem>
             </MenubarGroup>
           </MenubarContent>
         </MenubarMenu>

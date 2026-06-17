@@ -101,3 +101,13 @@ export type Order = Prisma.OrderModel
  * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
  */
 export type Review = Prisma.ReviewModel
+/**
+ * Model Category2_49
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Category2_49 = Prisma.Category2_49Model
+/**
+ * Model Shop2_49
+ * This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+ */
+export type Shop2_49 = Prisma.Shop2_49Model

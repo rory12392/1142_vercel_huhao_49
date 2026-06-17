@@ -21,4 +21,19 @@ export const adminLinks: NavLink[] = [
   { href: '/store_49/admin_49/sales_49', label: 'sales_49' },
   { href: '/store_49/admin_49/products_49', label: 'my products_49' },
   //{ href: '/store_49/admin_49/products_49/create', label: 'create product_49' },
+  { href: '/final_49/admin_49/shop2_49', label: 'shop2_49 - all' },
+  { href: '/final_49/admin_49/shop2_49/hats', label: 'shop2_49 - Hats' },
+  { href: '/final_49/admin_49/shop2_49/jackets', label: 'shop2_49 - Jackets' },
+  {
+    href: '/final_49/admin_49/shop2_49/sneakers',
+    label: 'shop2_49 - Sneakers',
+  },
+  {
+    href: '/final_49/admin_49/shop2_49/womens',
+    label: 'shop2_49 - Womens',
+  },
+  {
+    href: '/final_49/admin_49/shop2_49/mens',
+    label: 'shop2_49 - Mens',
+  },
 ];

@@ -62,7 +62,9 @@ export const ModelName = {
   CartItem: 'CartItem',
   Favorite: 'Favorite',
   Order: 'Order',
-  Review: 'Review'
+  Review: 'Review',
+  Category2_49: 'Category2_49',
+  Shop2_49: 'Shop2_49'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -230,6 +232,30 @@ export const ReviewScalarFieldEnum = {
 } as const
 
 export type ReviewScalarFieldEnum = (typeof ReviewScalarFieldEnum)[keyof typeof ReviewScalarFieldEnum]
+
+
+export const Category2_49ScalarFieldEnum = {
+  cid: 'cid',
+  cname: 'cname',
+  size: 'size',
+  image_url: 'image_url',
+  remote_image_url: 'remote_image_url',
+  link_url: 'link_url'
+} as const
+
+export type Category2_49ScalarFieldEnum = (typeof Category2_49ScalarFieldEnum)[keyof typeof Category2_49ScalarFieldEnum]
+
+
+export const Shop2_49ScalarFieldEnum = {
+  pid: 'pid',
+  pname: 'pname',
+  cat_id: 'cat_id',
+  price: 'price',
+  img_url: 'img_url',
+  remote_img_url: 'remote_img_url'
+} as const
+
+export type Shop2_49ScalarFieldEnum = (typeof Shop2_49ScalarFieldEnum)[keyof typeof Shop2_49ScalarFieldEnum]
 
 
 export const SortOrder = {
